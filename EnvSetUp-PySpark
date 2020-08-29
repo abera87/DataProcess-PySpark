@@ -1,0 +1,13 @@
+export SPARK_HOME='home/ubuntu/spark-3.0.0-bin-hadoop2.7'
+export PATH=$SPARK_HOME:$PATH
+export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH
+export PYSPARK_DRIVER_PYTHON="jupyter"
+export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
+export PYSPARK_PYTHON=python3
+
+
+import findspark
+
+findspark.init('/home/ubuntu/spark-3.0.0-bin-hadoop2.7')
+
+import pyspark
